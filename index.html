@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ギター単音メロディ練習(MVP)</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>ギター単音メロディ練習</h1>
+    <p class="tagline">採点は手段。続けられる寄り添い方を試すプロトタイプです。</p>
+  </header>
+
+  <section id="streak-section">
+    <div id="streak-label"></div>
+    <div id="streak-grid" class="streak-grid"></div>
+    <div id="streak-note" class="streak-note"></div>
+  </section>
+
+  <section id="skill-section">
+    <h2>技能カード</h2>
+    <div id="skill-list"></div>
+  </section>
+
+  <section id="exercise-section">
+    <h2>練習譜面を選ぶ</h2>
+    <div id="exercise-list" class="exercise-list"></div>
+  </section>
+
+  <section id="practice-view" class="hidden">
+    <h2 id="exercise-title"></h2>
+    <div id="progress-label"></div>
+    <div id="current-note" class="current-note"></div>
+    <div id="note-feedback" class="note-feedback"></div>
+  </section>
+
+  <div id="review-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>聞き比べモード</h3>
+      <p id="review-status"></p>
+      <audio id="review-playback" controls></audio>
+      <div class="modal-buttons">
+        <button id="review-ref-btn">基準音を聞く</button>
+        <button id="review-continue-btn">次へ</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>XP・レベル・バッジはありません。ストリークは罰則なしで週単位のみ表示します。</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
